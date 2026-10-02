@@ -175,7 +175,7 @@ All values in the output are `NA`!
 
 *What does `NA` stand for and why are you getting this as your answer to the previous question.*
 
-**Write your answer here**
+**Because many of the data entries for the number of visitors in 2021 are marked as NA causing an issue**
 
 ### Exercise j.
 
@@ -200,18 +200,18 @@ visitors %>%
 
 *Observe in question 6 that the mean statistics across all settings are much larger than the corresponding median statistics. Discuss in your group what this suggests about the data.*
 
-**Write your answer here**
+**There are several outliers that inflate the mean value**
 
 ## Question 8
 
 ### Exercise l.
 
 ```{r Q8}
-#visitors %>% 
-#  summarise(
-#     __________,
-#     __________,
-#  )
+visitors %>% 
+  summarise(
+     max2021 = max(n_2021, na.rm=TRUE),
+     min_2021 = min(n_2021, na.rm=TRUE)
+  )
 ```
 
 ## Question 9
